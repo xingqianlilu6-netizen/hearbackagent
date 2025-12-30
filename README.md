@@ -24,6 +24,12 @@ pip install -e .
 hearback-agent
 ```
 
+Web 界面（本地启动）：
+
+```bash
+hearback-agent-web  # 默认 http://localhost:8000
+```
+
 非交互生成纪要（提供 answers.json，其中键为问题 key）：
 
 ```bash

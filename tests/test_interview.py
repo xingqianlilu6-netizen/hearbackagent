@@ -56,5 +56,13 @@ class TestInterviewAgent(unittest.TestCase):
         self.assertIn("最小可复现步骤", summary)
 
 
+def test_render_form_contains_prompts():
+    from hearback_agent.web import render_form
+
+    html = render_form(default_questions()[:2])
+    assert "发生了什么错误" in html
+    assert "你本来期望发生什么" in html
+
+
 if __name__ == "__main__":
     unittest.main()

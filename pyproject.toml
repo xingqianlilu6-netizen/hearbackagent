@@ -8,6 +8,7 @@ dependencies = []
 
 [project.scripts]
 hearback-agent = "hearback_agent.cli:main"
+hearback-agent-web = "hearback_agent.web:main"
 
 [build-system]
 requires = ["setuptools>=61.0"]
