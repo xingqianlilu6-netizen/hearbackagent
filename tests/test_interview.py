@@ -64,5 +64,20 @@ def test_render_form_contains_prompts():
     assert "你本来期望发生什么" in html
 
 
+def test_start_web_imports_without_install(monkeypatch, tmp_path):
+    # Simulate running start_web.py from repo root without installation.
+    script = Path("start_web.py").resolve()
+    assert script.exists()
+
+    # Ensure root is first in sys.path like the script does.
+    monkeypatch.chdir(script.parent)
+    monkeypatch.syspath_prepend(str(script.parent))
+
+    import importlib
+
+    module = importlib.import_module("start_web")
+    assert hasattr(module, "main")
+
+
 if __name__ == "__main__":
     unittest.main()

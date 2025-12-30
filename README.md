@@ -28,6 +28,8 @@ Web 界面（本地启动）：
 
 ```bash
 hearback-agent-web  # 默认 http://localhost:8000
+# 若未安装或提示找不到模块，可用：
+python start_web.py  # 同样监听 http://localhost:8000
 ```
 
 非交互生成纪要（提供 answers.json，其中键为问题 key）：
