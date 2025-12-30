@@ -32,6 +32,8 @@ hearback-agent-web  # 默认 http://localhost:8000
 python start_web.py  # 同样监听 http://localhost:8000
 ```
 
+Web 界面支持麦克风语音输入（依赖浏览器 Web Speech API，推荐 Chrome）；点击每个问题右侧的「🎤 语音输入」按钮即可把识别结果填入文本框。
+
 非交互生成纪要（提供 answers.json，其中键为问题 key）：
 
 ```bash

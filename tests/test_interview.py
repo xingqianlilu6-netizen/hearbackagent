@@ -62,6 +62,7 @@ def test_render_form_contains_prompts():
     html = render_form(default_questions()[:2])
     assert "发生了什么错误" in html
     assert "你本来期望发生什么" in html
+    assert "语音输入" in html
 
 
 def test_start_web_imports_without_install(monkeypatch, tmp_path):
