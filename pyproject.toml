@@ -1,0 +1,15 @@
+[project]
+name = "hearbackagent"
+version = "0.1.0"
+description = "Hearback errors interview agent"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+hearback-agent = "hearback_agent.cli:main"
+hearback-agent-web = "hearback_agent.web:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
